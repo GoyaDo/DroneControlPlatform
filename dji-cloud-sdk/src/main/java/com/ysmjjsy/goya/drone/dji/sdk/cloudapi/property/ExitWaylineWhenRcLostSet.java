@@ -1,0 +1,38 @@
+package com.ysmjjsy.goya.drone.dji.sdk.cloudapi.property;
+
+import com.ysmjjsy.goya.drone.dji.sdk.cloudapi.device.ExitWaylineWhenRcLostEnum;
+import com.ysmjjsy.goya.drone.dji.sdk.common.BaseModel;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.validation.constraints.NotNull;
+
+/**
+ * @author sean
+ * @version 1.4
+ * @date 2023/3/3
+ */
+public class ExitWaylineWhenRcLostSet extends BaseModel {
+
+    @NotNull
+    @JsonProperty("exit_wayline_when_rc_lost")
+    private ExitWaylineWhenRcLostEnum exitWaylineWhenRcLost;
+
+    public ExitWaylineWhenRcLostSet() {
+    }
+
+    @Override
+    public String toString() {
+        return "ExitWaylineWhenRcLostSet{" +
+                "exitWaylineWhenRcLost=" + exitWaylineWhenRcLost +
+                '}';
+    }
+
+    public ExitWaylineWhenRcLostEnum getExitWaylineWhenRcLost() {
+        return exitWaylineWhenRcLost;
+    }
+
+    public ExitWaylineWhenRcLostSet setExitWaylineWhenRcLost(ExitWaylineWhenRcLostEnum exitWaylineWhenRcLost) {
+        this.exitWaylineWhenRcLost = exitWaylineWhenRcLost;
+        return this;
+    }
+}

@@ -1,0 +1,41 @@
+package com.ysmjjsy.goya.drone.dji.sdk.cloudapi.property;
+
+import com.ysmjjsy.goya.drone.dji.sdk.common.BaseModel;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+
+/**
+ * @author sean
+ * @version 1.4
+ * @date 2023/3/3
+ */
+public class RthAltitudeSet extends BaseModel {
+
+    @NotNull
+    @Min(20)
+    @Max(50)
+    @JsonProperty("rth_altitude")
+    private Integer rthAltitude;
+
+    public RthAltitudeSet() {
+    }
+
+    @Override
+    public String toString() {
+        return "RthAltitudeSet{" +
+                "rthAltitude=" + rthAltitude +
+                '}';
+    }
+
+    public Integer getRthAltitude() {
+        return rthAltitude;
+    }
+
+    public RthAltitudeSet setRthAltitude(Integer rthAltitude) {
+        this.rthAltitude = rthAltitude;
+        return this;
+    }
+}

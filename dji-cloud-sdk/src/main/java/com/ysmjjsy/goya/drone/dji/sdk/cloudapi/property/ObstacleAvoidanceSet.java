@@ -1,0 +1,38 @@
+package com.ysmjjsy.goya.drone.dji.sdk.cloudapi.property;
+
+import com.ysmjjsy.goya.drone.dji.sdk.cloudapi.device.ObstacleAvoidance;
+import com.ysmjjsy.goya.drone.dji.sdk.common.BaseModel;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+
+/**
+ * @author sean
+ * @version 1.3
+ * @date 2022/10/27
+ */
+public class ObstacleAvoidanceSet extends BaseModel {
+
+    @Valid
+    @NotNull
+    private ObstacleAvoidance obstacleAvoidance;
+
+    public ObstacleAvoidanceSet() {
+    }
+
+    @Override
+    public String toString() {
+        return "ObstacleAvoidanceSet{" +
+                "obstacleAvoidance=" + obstacleAvoidance +
+                '}';
+    }
+
+    public ObstacleAvoidance getObstacleAvoidance() {
+        return obstacleAvoidance;
+    }
+
+    public ObstacleAvoidanceSet setObstacleAvoidance(ObstacleAvoidance obstacleAvoidance) {
+        this.obstacleAvoidance = obstacleAvoidance;
+        return this;
+    }
+}
